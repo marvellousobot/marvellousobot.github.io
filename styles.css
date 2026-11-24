@@ -157,3 +157,79 @@ body.portfolio-detail .nav{display:flex}
  .evidence-note{grid-column:1}
  .detail-next{align-items:flex-start;flex-direction:column;padding:45px 6vw}
 }
+
+
+/* Three-part portfolio homepage: About / Work / Let's work together */
+body.home .site-header .nav{gap:clamp(14px,2.5vw,34px)}
+body.home .site-header .nav a{white-space:nowrap}
+body.home .site-header .nav a:last-child{color:var(--ochre)}
+body.home .about-section{background:var(--paper)}
+body.home .hero-overline{margin:38px 0 0;color:#dfb56d;font-size:.7rem;font-weight:800;letter-spacing:.2em}
+body.home .hero h1{margin-top:14px}
+body.home .about-intro{display:grid;grid-template-columns:.7fr 1.6fr;gap:7vw;padding-top:95px;padding-bottom:70px}
+body.home .about-intro h2{max-width:850px}
+body.home .about-intro-copy p{max-width:780px}
+body.home .about-credentials{max-width:var(--max);margin:0 auto;padding:20px 5vw 80px;display:grid;grid-template-columns:.75fr 1.5fr;gap:7vw}
+body.home .about-current .section-label,body.home .about-capabilities>.section-label{display:block;margin-bottom:22px}
+body.home .about-capabilities .capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.home .about-capabilities .capability-grid article{min-height:210px}
+body.home .about-capabilities .capability-grid article span{margin-bottom:22px}
+body.home .about-quote{max-width:var(--max);margin:0 auto;padding:30px 5vw 95px;font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.2vw,3rem);line-height:1.13;border-top:1px solid var(--line)}
+body.home .work-section{background:var(--paper2);padding-bottom:0}
+body.home .work-intro{padding:100px 5vw 65px;background:var(--forest);color:var(--cream)}
+body.home .work-intro>*{max-width:var(--max);margin-left:auto;margin-right:auto}
+body.home .work-intro .section-label{color:#dfb56d}
+body.home .work-intro h2{font-size:clamp(2.7rem,5.5vw,5.5rem);max-width:980px;margin-top:22px}
+body.home .work-intro>p{color:#d4dbd4;max-width:720px;margin-left:max(5vw,calc((100vw - var(--max))/2 + 5vw));font-size:1.05rem}
+body.home .work-jump-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+body.home .work-jump-links a{display:inline-flex;gap:20px;align-items:center;border:1px solid #71877a;padding:12px 16px;color:var(--cream);font-size:.75rem;font-weight:700;letter-spacing:.04em;transition:background .2s,color .2s,border-color .2s}
+body.home .work-jump-links a:hover{background:var(--ochre);color:var(--forest);border-color:var(--ochre)}
+body.home .work-jump-links span{color:#dfb56d}
+body.home .work-subsection{max-width:none;padding-left:max(5vw,calc((100vw - var(--max))/2 + 5vw));padding-right:max(5vw,calc((100vw - var(--max))/2 + 5vw));scroll-margin-top:90px}
+body.home .work-subsection+.work-subsection{border-top:1px solid var(--line)}
+body.home .work-subsection .section-head h2{max-width:920px}
+body.home .work-subsection .section-head p{max-width:740px}
+body.home .approach-section{background:#e3dac7;display:grid;grid-template-columns:.8fr 1.5fr;gap:7vw}
+body.home .approach-heading h2{font-size:clamp(2.5rem,4.5vw,4.5rem)}
+body.home .approach-heading>p{color:var(--muted);max-width:430px}
+body.home .approach-statement{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,2.6vw,2.5rem);line-height:1.12;margin:0 0 35px;max-width:720px}
+body.home .approach-content .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.home .ideas-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+body.home .idea-card{background:var(--paper);padding:30px;min-height:250px;transition:background .2s,transform .2s}
+body.home .idea-card:hover{background:var(--paper2);transform:translateY(-3px)}
+body.home .idea-card>span{display:block;color:#8b6a35;font-size:.66rem;font-weight:800;letter-spacing:.12em;margin-bottom:38px}
+body.home .idea-card h3{font-size:1.35rem}
+body.home .idea-card p{color:var(--muted);font-size:.9rem}
+body.home .contact{scroll-margin-top:70px}
+body.home .contact h2{max-width:950px}
+body.home .contact-lede{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.5vw,2.3rem);max-width:780px;color:#d5ddd5}
+body.home .contact-actions{display:flex;gap:30px;flex-wrap:wrap;margin-top:20px}
+body.home .back-top{display:inline-block;margin-top:60px;color:#dfb56d;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+body.home .back-top:hover{color:var(--cream)}
+@media(max-width:900px){
+ body.home .about-intro,.about-credentials,body.home .approach-section{grid-template-columns:1fr;gap:32px}
+ body.home .about-credentials{padding-left:6vw;padding-right:6vw}
+ body.home .about-quote{padding-left:6vw;padding-right:6vw}
+ body.home .work-intro{padding-left:6vw;padding-right:6vw}
+ body.home .work-intro>p{margin-left:0}
+ body.home .work-subsection{padding-left:6vw;padding-right:6vw}
+ body.home .ideas-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+ body.home .site-header{padding:15px 6vw}
+ body.home .about-intro{padding-top:70px;padding-bottom:55px}
+ body.home .about-capabilities .capability-grid{grid-template-columns:1fr}
+ body.home .about-credentials{padding-bottom:55px}
+ body.home .about-quote{padding-bottom:65px}
+ body.home .work-intro{padding-top:70px;padding-bottom:50px}
+ body.home .work-jump-links{gap:8px}
+ body.home .work-jump-links a{flex:1 1 calc(50% - 8px);justify-content:space-between;padding:11px}
+ body.home .work-subsection{padding-top:70px;padding-bottom:70px}
+ body.home .approach-section{display:block}
+ body.home .approach-content{margin-top:30px}
+ body.home .approach-content .steps{grid-template-columns:1fr}
+ body.home .ideas-grid{grid-template-columns:1fr}
+ body.home .idea-card{min-height:0}
+ body.home .idea-card>span{margin-bottom:22px}
+ body.home .contact-actions{flex-direction:column;gap:14px;align-items:flex-start}
+}
